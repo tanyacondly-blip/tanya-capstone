@@ -1,34 +1,39 @@
-<!-- Global styles for the Desert Sky website-->
-*{
-   background-margin: 0;
+/* Global styles for the Desert Sky website */
+* {
+    box-sizing: border-box;
 }
-body{background-color: #455953;
-            font-family: 'Montserrat', sans-serif;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        p{ font-family: 'Source Sans 3', sans-serif;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        li{ font-family: 'Source Sans 3', sans-serif;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-<!-- Specific styles for header and footer-->
-        header{
-            background-color: #D67A4E;
-            padding: 20px;
-             margin: 0;
-        }
 
-        footer{
-            background-color: #D67A4E;
-            padding: 20px;
-             margin: 0;
-        }
+body {
+    background-color: #455953;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
 
+p { 
+    font-family: 'Source Sans 3', sans-serif;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
 
+li { 
+    font-family: 'Source Sans 3', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Specific styles for header and footer */
+header {
+    background-color: #D67A4E;
+    padding: 20px;
+    margin: 0;
+}
+
+footer {
+    background-color: #D67A4E;
+    padding: 20px;
+    margin: 0;
+}
