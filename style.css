@@ -24,13 +24,18 @@ li {
     margin: 0;
     padding: 0;
 }
-
+main img {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
 /* Specific styles for header and footer */
 header {
     background-color: #596b4a;
     font-family: 'Sekuya', sans-serif;
     padding: 20px;
     margin: 0;
+    text-align: right;
 }
 
 footer {
@@ -38,19 +43,20 @@ footer {
     padding: 20px;
     margin: 0;
     font-weight: bold;
+    text-align: right;
 }
 
 /* Unclicked links in the body text */
 main a:link {
-    color: #2c1613; /* Stays the same colour as text */
-    font-weight: bold; /* Makes the hyperlink pop out */
+    color: #2c1613;
+    font-weight: bold;
     text-decoration: underline;
     font-style: italic;
 }
 
 /* Clicked links in the body text */
 main a:visited {
-    color: #2c1613; /* Stays the same color even after being clicked */
+    color: #2c1613;
     font-weight: bold;
     font-style: italic;
 }
@@ -59,15 +65,15 @@ main a:visited {
 
 /* The button style */
 button {
-    background-color: #455953; /* Deep sage green to contrast against the terracotta footer */
-    color: #ffffff; /* Crisp white text */
-    font-family: 'Montserrat', sans-serif; /* Matches your main page headings */
+    background-color: #455953;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 1px;
     
     /* Spacing and Sizing */
-    padding: 12px 28px; /* Top/Bottom padding, Left/Right padding */
+    padding: 12px 28px;
     margin: 15px 0;
     
     /* Borders and Soft Corners */
@@ -81,17 +87,17 @@ button {
 
 /* The hover state when someone rolls their mouse over it */
 button:hover {
-    background-color: #ffffff; /* Flips the background to white */
-    color: #455953; /* Flips the text to your deep sage green */
+    background-color: #ffffff;
+    color: #455953;
     border-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Adds a soft elegant shadow underneath */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /*Natigation & Footer Link Colours and Spacing*/
 
 /* Unclicked state (The original color before a user clicks it) */
 nav a:link {
-    color: #edd9b7; /* Clean white */
+    color: #edd9b7;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     letter-spacing: 2px;
@@ -99,19 +105,268 @@ nav a:link {
     text-transform: uppercase;
 }
 
-/* Clicked state (The color the link changes to AFTER it has been visited) */
+/* Clicked state (The color the link AFTER it has been visited) */
 nav a:visited {
-    color: #edd9b7; /* A soft, muted grey-white so users know they've been there */
+    color: #edd9b7;
 }
 
 /* Unclicked state in the footer */
 footer a:link {
-    color: #edd9b7; /* Clean white */
+    color: #edd9b7;
     font-family: 'Montserrat', sans-serif;
-    text-decoration: underline; /* Keeps footer links looking like links */
+    text-decoration: underline;
 }
 
 /* Clicked state in the footer */
 footer a:visited {
-    color: #edd9b7; /* Keeps the links the same colour */
+    color: #edd9b7;
+}
+
+/* ---Specific styles for class sections--- */
+
+/* ==========================================
+   HOMEPAGE STRUCTURAL FIXES (index.html)
+   ========================================== */
+
+/* TITLE INTRO BLOCK */
+.intro-block {
+    background-color: #455953;
+    color: #ffffff;
+    margin: 0;
+    padding: 60px 40px;
+    text-align: center;
+}
+.intro-block h1 {
+    font-family: 'Sekuya', sans-serif;
+    color: #F1EFEA;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.intro-block p {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* PROPERTY BLOCK*/
+.property-block {
+    background-color: #F1EFEA;
+    color: #2C3531;
+    margin: 0;
+    padding: 60px 40px;
+}
+.property-block h2 {
+    color: #D67A4E;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.property-block p {
+    color: #2C3531;
+    margin-bottom: 20px;
+}
+
+/* ABOUT BLOCK */
+.about-block {
+    background-color: #D67A4E;
+    color: #ffffff;
+    margin: 0;
+    padding: 60px 40px;
+}
+.about-block h2 {
+    color: #F1EFEA;
+    margin-top: 0;
+}
+.about-block p, .about-block li {
+    color: #ffffff;
+}
+
+/* STAY BLOCK */
+.stay-block {
+    background-color: #F1EFEA;
+    color: #2C3531;
+    margin: 0;
+    padding: 60px 40px;
+}
+.stay-block h2 {
+    color: #D67A4E;
+    margin-top: 0;
+}
+.stay-block p {
+    color: #2C3531;
+    margin-bottom: 0;
+}
+
+/* WELLNESS BLOCK */
+.wellness-block {
+    background-color: #455953;
+    color: #ffffff;
+    margin: 0;
+    padding: 60px 40px;
+}
+.wellness-block h2 {
+    color: #F1EFEA;
+    margin-top: 0;
+}
+.wellness-block p {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* TRAILS BLOCK */
+.trails-block {
+    background-color: #F1EFEA;
+    color: #2C3531;
+    margin: 0;
+    padding: 60px 40px;
+}
+.trails-block h2, .trails-block h3 {
+    color: #D67A4E;
+    margin-top: 0;
+}
+.trails-block p, .trails-block li {
+    color: #2C3531;
+}
+
+/* SUSTAINABILITY BLOCK */
+.sustainability-block {
+    background-color: #D67A4E;
+    color: #ffffff;
+    margin: 0;
+    padding: 60px 40px;
+}
+.sustainability-block h2 {
+    color: #F1EFEA;
+    margin-top: 0;
+}
+.sustainability-block p {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* HOME PAGE CANINE BLOCK */
+.canine-block {
+    background-color: #F1EFEA;
+    color: #2C3531;
+    margin: 0;
+    padding: 60px 40px;
+}
+.canine-block h2 {
+    color: #D67A4E;
+    margin-top: 0;
+}
+.canine-block h3 {
+    color: #4A5653;
+}
+.canine-block p {
+    color: #2C3531;
+    margin-bottom: 0;
+}
+
+/* PLANNING BLOCK */
+.planning-block {
+    background-color: #455953;
+    color: #ffffff;
+    margin: 0;
+    padding: 60px 40px;
+}
+.planning-block h2 {
+    color: #F1EFEA;
+    margin-top: 0;
+}
+.planning-block p {
+    color: #ffffff;
+}
+.planning-block a {
+    color: #F1EFEA;
+}
+
+
+/* ==========================================
+   CANINE PAGE SPECIFIC BLOCKS (canine.html)
+   ========================================== */
+
+/* CANINE CARE BLOCK */
+.canine-care-block {
+    background-color: #F1EFEA;
+    color: #2C3531;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*SEDONA TRAILS BLOCK*/
+.canine-trails-block {
+    background-color: #455953; 
+    margin: 0;
+    padding: 40px 20px; 
+}   
+
+.canine-trails-block h3 {
+    color: #F1EFEA;
+    margin-top: 0; 
+    margin-bottom: 15px;
+}
+
+.canine-trails-block p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* DAYCARE BLOCK */
+.daycare-block {
+    background-color: #F1EFEA;
+    color: #2C3531;
+    margin: 0;
+    padding: 40px 20px;
+}
+.daycare-block h3 {
+    color: #D67A4E;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.daycare-block p, .daycare-block li {
+    color: #2C3531;
+}
+
+/* PACKING BLOCK */
+.packing-block {
+    background-color: #455953;
+    margin: 0;
+    padding: 40px 20px;
+}
+.packing-block h3 {
+    color: #F1EFEA;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.packing-block p {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   GLOBAL CALL TO ACTION BLOCK & BUTTON
+   ========================================== */
+.call-to-action-block {
+    background-color: #1A1C12;
+    color: #ffffff;
+    margin: 0;
+    padding: 60px 40px;
+    text-align: center;
+}
+.call-to-action-block h2 {
+    color: #ffffff;
+    margin-top: 0;
+}
+.call-to-action-block p {
+    color: #ffffff;
+}
+.call-to-action-block button {
+    background-color: #D67A4E;
+    color: #ffffff;
+    border: none;
 }
