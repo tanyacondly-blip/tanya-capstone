@@ -4,36 +4,114 @@
 }
 
 body {
-    background-color: #455953;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
+    background-color: #edd9b7;
+    font-family: 'Sekuya', sans-serif;
+    color: #944a3a;
     margin: 0;
     padding: 0;
 }
 
 p { 
-    font-family: 'Source Sans 3', sans-serif;
-    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c1613;
     margin: 0 0 15px 0;
     padding: 0;
 }
 
 li { 
-    font-family: 'Source Sans 3', sans-serif;
-    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #2c1613;
     margin: 0;
     padding: 0;
 }
 
 /* Specific styles for header and footer */
 header {
-    background-color: #D67A4E;
+    background-color: #596b4a;
+    font-family: 'Sekuya', sans-serif;
     padding: 20px;
     margin: 0;
 }
 
 footer {
-    background-color: #D67A4E;
+    background-color: #596b4a;
     padding: 20px;
     margin: 0;
+    font-weight: bold;
+}
+
+/* Unclicked links in the body text */
+main a:link {
+    color: #2c1613; /* Stays the same colour as text */
+    font-weight: bold; /* Makes the hyperlink pop out */
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* Clicked links in the body text */
+main a:visited {
+    color: #2c1613; /* Stays the same color even after being clicked */
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Custom Book Now Button Styles */
+
+/* The button style */
+button {
+    background-color: #455953; /* Deep sage green to contrast against the terracotta footer */
+    color: #ffffff; /* Crisp white text */
+    font-family: 'Montserrat', sans-serif; /* Matches your main page headings */
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+    /* Spacing and Sizing */
+    padding: 12px 28px; /* Top/Bottom padding, Left/Right padding */
+    margin: 15px 0;
+    
+    /* Borders and Soft Corners */
+    border: 2px solid #ffffff; /* Clean white border line */
+    border-radius: 8px; /* Smooth, soft rounded corners */
+    
+    /* Interactive Settings */
+    cursor: pointer; /* Turns the mouse cursor into a clicking hand */
+    transition: all 0.3s ease; /* Makes the color transition smooth when hovered */
+}
+
+/* The hover state when someone rolls their mouse over it */
+button:hover {
+    background-color: #ffffff; /* Flips the background to white */
+    color: #455953; /* Flips the text to your deep sage green */
+    border-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Adds a soft elegant shadow underneath */
+}
+
+/*Natigation & Footer Link Colours and Spacing*/
+
+/* Unclicked state (The original color before a user clicks it) */
+nav a:link {
+    color: #edd9b7; /* Clean white */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Clicked state (The color the link changes to AFTER it has been visited) */
+nav a:visited {
+    color: #edd9b7; /* A soft, muted grey-white so users know they've been there */
+}
+
+/* Unclicked state in the footer */
+footer a:link {
+    color: #edd9b7; /* Clean white */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline; /* Keeps footer links looking like links */
+}
+
+/* Clicked state in the footer */
+footer a:visited {
+    color: #edd9b7; /* Keeps the links the same colour */
 }
