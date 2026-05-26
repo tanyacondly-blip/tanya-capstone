@@ -12,12 +12,28 @@ body {
     padding: 0;
 }
 
+/* Global Heading Rules to handle fonts and tracking */
+h1, h2, h3 {
+    font-family: 'Sekuya', sans-serif;
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 p { 
     font-family: 'Montserrat', sans-serif;
     color: #2f1811;
     margin: 0 0 15px 0;
     padding: 0;
     font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 li { 
@@ -25,7 +41,10 @@ li {
     color: #2f1811;
     margin: 0;
     padding: 0;
+    font-weight: 500;
+    line-height: 1.6;
 }
+
 main img {
     display: block;
     margin-top: 25px;
@@ -71,35 +90,33 @@ main a:visited {
 
 /* Custom Book Now Button Styles */
 
-/* The button style */
+/* RESTING STATE: Clear contrast identity */
 button {
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 3px;
-    
-    /* Spacing and Sizing */
     padding: 12px 28px;
     margin: 15px 0;
-    
-    /* Borders and Soft Corners */
-    border: 2px solid #ffffff; /* Clean white border line */
-    border-radius: 8px; /* Smooth, soft rounded corners */
-    
-    /* Interactive Settings */
-    cursor: pointer; /* Turns the mouse cursor into a clicking hand */
-    transition: all 0.3s ease; /* Makes the color transition smooth when hovered */
+    background-color: #2f1811;  /* Dark espresso resting background */
+    color: #F1EFEA;             /* Warm cream resting text */
+    border: 2px solid #2f1811;  /* Sharp, matching espresso border frame */
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
 }
 
-/* The hover state when someone rolls their mouse over it */
+/* HOVER STATE: Dynamic interactive swap */
 button:hover {
-    background-color: #ffffff;
-    color: #455953;
-    border-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: #F1EFEA;  /* Swaps to warm cream background */
+    color: #2f1811;             /* Swaps text back to dark espresso */
+    border-color: #2f1811;      /* Retains structural border continuity */
+    box-shadow: 0 4px 15px rgba(47, 24, 17, 0.2);
 }
 
 /*Natigation & Footer Link Colours and Spacing*/
+
+/* NAVIGATION */
 
 /* Unclicked state (The original color before a user clicks it) */
 nav a:link {
@@ -115,6 +132,19 @@ nav a:link {
 nav a:visited {
     color: #ede9c4;
 }
+
+/* The hover state when someone rolls their mouse over a nav link */
+nav a:hover {
+    color: #FFFFFF;                       /* Or change to #9f5d4d if you want that terracotta pop! */
+    font-family: 'Montserrat', sans-serif; /* Keeps your clean paragraph font active */
+    cursor: pointer;                      /* Shows the interactive clicking hand */
+    transition: color 0.2s ease;
+}
+nav a:active{
+    color: #9f5d4d;                       /* Optional: A distinct color when the link is actively being clicked */
+}
+
+/* FOOTER */
 
 /* Unclicked state in the footer */
 footer a:link {
@@ -143,15 +173,11 @@ footer a:visited {
     text-align: center;
 }
 .intro-block h1 {
-    font-family: 'Sekuya', sans-serif;
     color: #742713;
-    margin-top: 0;
-    margin-bottom: 15px;
     letter-spacing: 8px;
 }
 .intro-block p {
     color: #742713;
-    margin-bottom: 0;
 }
 
 /* PROPERTY BLOCK*/
@@ -163,12 +189,8 @@ footer a:visited {
 }
 .property-block h2 {
     color: #bb5d3e;
-    margin-top: 0;
-    margin-bottom: 20px;
-    letter-spacing: 4px;
 }
 .property-block p {
-    color: #2f1811;
     margin-bottom: 20px;
 }
 
@@ -181,8 +203,6 @@ footer a:visited {
 }
 .about-block h2 {
     color: #F1EFEA;
-    margin-top: 0;
-    letter-spacing: 4px;
 }
 .about-block p, .about-block li {
     color: #F1EFEA;
@@ -197,12 +217,9 @@ footer a:visited {
 }
 .stay-block h2 {
     color: #742713;
-    margin-top: 0;
-    letter-spacing: 4px;
 }
 .stay-block p {
     color: #742713;
-    margin-bottom: 0;
 }
 
 /* WELLNESS BLOCK */
@@ -214,12 +231,9 @@ footer a:visited {
 }
 .wellness-block h2 {
     color: #D67A4E;
-    margin-top: 0;
-    letter-spacing: 4px;
 }
 .wellness-block p {
     color: #2f1811;
-    margin-bottom: 0;
 }
 
 /* TRAILS BLOCK */
@@ -231,8 +245,6 @@ footer a:visited {
 }
 .trails-block h2, .trails-block h3 {
     color: #F1EFEA;
-    margin-top: 0;
-    letter-spacing: 4px;
 }
 .trails-block p, .trails-block li {
     color: #F1EFEA;
@@ -247,12 +259,9 @@ footer a:visited {
 }
 .sustainability-block h2 {
     color: #742713;
-    margin-top: 0;
-    letter-spacing: 4px;
 }
 .sustainability-block p {
     color: #742713;
-    margin-bottom: 0;
 }
 
 /* HOME PAGE CANINE BLOCK */
@@ -262,18 +271,11 @@ footer a:visited {
     margin: 0;
     padding: 60px 40px;
 }
-.canine-block h2 {
+.canine-block h2, .canine-block h3 {
     color: #D67A4E;
-    margin-top: 0;
-    letter-spacing: 4px;
-}
-.canine-block h3 {
-    color: #D67A4E;
-    letter-spacing: 4px;
 }
 .canine-block p {
     color: #2f1811;
-    margin-bottom: 0;
 }
 
 /* PLANNING BLOCK */
@@ -285,8 +287,6 @@ footer a:visited {
 }
 .planning-block h2 {
     color: #F1EFEA;
-    margin-top: 0;
-    letter-spacing: 4px;
 }
 .planning-block p {
     color: #F1EFEA;
@@ -308,15 +308,8 @@ footer a:visited {
     padding: 40px 20px;
     text-align: center;
 }
-
 .canine-care-block p {
     color: #742713;
-}
-
-h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    letter-spacing: 4px;
 }
 
 /*SEDONA TRAILS BLOCK*/
@@ -325,14 +318,9 @@ h1 {
     margin: 0;
     padding: 40px 20px; 
 }   
-
 .canine-trails-block h3 {
     color: #D67A4E;
-    margin-top: 0; 
-    margin-bottom: 15px;
-    letter-spacing: 4px;
 }
-
 .canine-trails-block p {
     color: #2f1811;
     margin-bottom: 20px;
@@ -347,9 +335,6 @@ h1 {
 }
 .daycare-block h3 {
     color: #F1EFEA;
-    margin-top: 0;
-    margin-bottom: 15px;
-    letter-spacing: 4px;
 }
 .daycare-block p, .daycare-block li {
     color: #F1EFEA;
@@ -363,9 +348,6 @@ h1 {
 }
 .packing-block h3 {
     color: #D67A4E;
-    margin-top: 0;
-    margin-bottom: 15px;
-    letter-spacing: 4px;
 }
 .packing-block p {
     color: #2f1811;
@@ -384,15 +366,21 @@ h1 {
 }
 .call-to-action-block h2 {
     color: #ffffff;
-    margin-top: 0;
     letter-spacing: 8px;
 }
 .call-to-action-block p {
     color: #ffffff;
     font-style: italic;
 }
+
+/* Custom override variant for the CTA block button inside dark layout */
 .call-to-action-block button {
-    background-color: #F1EFEA;;
-    color: #9f5d4d;
-    border: none;
+    background-color: #F1EFEA;   /* Clear cream resting identity on dark background */
+    color: #9f5d4d;             /* Matching clay text shade */
+    border: 2px solid #F1EFEA;
+}
+.call-to-action-block button:hover {
+    background-color: transparent; /* Clean hollow ghost layout on hover */
+    color: #F1EFEA;                /* Shifts text color to light clear cream */
+    border-color: #F1EFEA;
 }
