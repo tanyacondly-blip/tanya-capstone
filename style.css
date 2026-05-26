@@ -1,10 +1,11 @@
 /* Global styles for the Desert Sky website */
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #edd9b7;
+    background-color: #ddd5d4;
     font-family: 'Sekuya', sans-serif;
     color: #944a3a;
     margin: 0;
@@ -13,14 +14,15 @@ body {
 
 p { 
     font-family: 'Montserrat', sans-serif;
-    color: #2c1613;
+    color: #2f1811;
     margin: 0 0 15px 0;
     padding: 0;
+    font-size: 18px;
 }
 
 li { 
     font-family: 'Montserrat', sans-serif;
-    color: #2c1613;
+    color: #2f1811;
     margin: 0;
     padding: 0;
 }
@@ -29,9 +31,10 @@ main img {
     margin-top: 25px;
     margin-bottom: 20px;
 }
+
 /* Specific styles for header and footer */
 header {
-    background-color: #596b4a;
+    background-color: #2f1811;
     font-family: 'Sekuya', sans-serif;
     padding: 20px;
     margin: 0;
@@ -39,16 +42,21 @@ header {
 }
 
 footer {
-    background-color: #596b4a;
+    background-color: #2f1811;
+    color: #ddd5d4;
     padding: 20px;
     margin: 0;
     font-weight: bold;
     text-align: right;
 }
 
+footer p {
+    color: #ddd5d4;
+}
+
 /* Unclicked links in the body text */
 main a:link {
-    color: #2c1613;
+    color: #ddd5d4;
     font-weight: bold;
     text-decoration: underline;
     font-style: italic;
@@ -56,7 +64,7 @@ main a:link {
 
 /* Clicked links in the body text */
 main a:visited {
-    color: #2c1613;
+    color: #ddd5d4;
     font-weight: bold;
     font-style: italic;
 }
@@ -65,12 +73,10 @@ main a:visited {
 
 /* The button style */
 button {
-    background-color: #455953;
-    color: #ffffff;
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     
     /* Spacing and Sizing */
     padding: 12px 28px;
@@ -97,29 +103,29 @@ button:hover {
 
 /* Unclicked state (The original color before a user clicks it) */
 nav a:link {
-    color: #edd9b7;
+    color: #ede9c4;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 /* Clicked state (The color the link AFTER it has been visited) */
 nav a:visited {
-    color: #edd9b7;
+    color: #ede9c4;
 }
 
 /* Unclicked state in the footer */
 footer a:link {
-    color: #edd9b7;
+    color: #ede9c4;
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
 }
 
 /* Clicked state in the footer */
 footer a:visited {
-    color: #edd9b7;
+    color: #ede9c4;
 }
 
 /* ---Specific styles for class sections--- */
@@ -130,150 +136,160 @@ footer a:visited {
 
 /* TITLE INTRO BLOCK */
 .intro-block {
-    background-color: #455953;
-    color: #ffffff;
+    background-color: #d6b3a0;
+    color: #2f1811;
     margin: 0;
     padding: 60px 40px;
     text-align: center;
 }
 .intro-block h1 {
     font-family: 'Sekuya', sans-serif;
-    color: #F1EFEA;
+    color: #742713;
     margin-top: 0;
     margin-bottom: 15px;
+    letter-spacing: 8px;
 }
 .intro-block p {
-    color: #ffffff;
+    color: #742713;
     margin-bottom: 0;
 }
 
 /* PROPERTY BLOCK*/
 .property-block {
-    background-color: #F1EFEA;
-    color: #2C3531;
+    background-color: #ddd5d4;
+    color: #2f1811;
     margin: 0;
     padding: 60px 40px;
 }
 .property-block h2 {
-    color: #D67A4E;
+    color: #bb5d3e;
     margin-top: 0;
     margin-bottom: 20px;
+    letter-spacing: 4px;
 }
 .property-block p {
-    color: #2C3531;
+    color: #2f1811;
     margin-bottom: 20px;
 }
 
 /* ABOUT BLOCK */
 .about-block {
-    background-color: #D67A4E;
-    color: #ffffff;
+    background-color: #9f5d4d;
+    color: #F1EFEA;
     margin: 0;
     padding: 60px 40px;
 }
 .about-block h2 {
     color: #F1EFEA;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .about-block p, .about-block li {
-    color: #ffffff;
+    color: #F1EFEA;
 }
 
 /* STAY BLOCK */
 .stay-block {
-    background-color: #F1EFEA;
-    color: #2C3531;
+    background-color: #d6b3a0;
+    color: #742713;
     margin: 0;
     padding: 60px 40px;
 }
 .stay-block h2 {
-    color: #D67A4E;
+    color: #742713;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .stay-block p {
-    color: #2C3531;
+    color: #742713;
     margin-bottom: 0;
 }
 
 /* WELLNESS BLOCK */
 .wellness-block {
-    background-color: #455953;
-    color: #ffffff;
+    background-color: #F1EFEA;
+    color: #D67A4E;
     margin: 0;
     padding: 60px 40px;
 }
 .wellness-block h2 {
-    color: #F1EFEA;
+    color: #D67A4E;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .wellness-block p {
-    color: #ffffff;
+    color: #2f1811;
     margin-bottom: 0;
 }
 
 /* TRAILS BLOCK */
 .trails-block {
-    background-color: #F1EFEA;
-    color: #2C3531;
+    background-color: #9f5d4d;
+    color: #F1EFEA;
     margin: 0;
     padding: 60px 40px;
 }
 .trails-block h2, .trails-block h3 {
-    color: #D67A4E;
+    color: #F1EFEA;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .trails-block p, .trails-block li {
-    color: #2C3531;
+    color: #F1EFEA;
 }
 
 /* SUSTAINABILITY BLOCK */
 .sustainability-block {
-    background-color: #D67A4E;
-    color: #ffffff;
+    background-color: #d6b3a0;
+    color: #742713;
     margin: 0;
     padding: 60px 40px;
 }
 .sustainability-block h2 {
-    color: #F1EFEA;
+    color: #742713;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .sustainability-block p {
-    color: #ffffff;
+    color: #742713;
     margin-bottom: 0;
 }
 
 /* HOME PAGE CANINE BLOCK */
 .canine-block {
     background-color: #F1EFEA;
-    color: #2C3531;
+    color: #D67A4E;
     margin: 0;
     padding: 60px 40px;
 }
 .canine-block h2 {
     color: #D67A4E;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .canine-block h3 {
-    color: #4A5653;
+    color: #D67A4E;
+    letter-spacing: 4px;
 }
 .canine-block p {
-    color: #2C3531;
+    color: #2f1811;
     margin-bottom: 0;
 }
 
 /* PLANNING BLOCK */
 .planning-block {
-    background-color: #455953;
-    color: #ffffff;
+    background-color: #9f5d4d;
+    color: #F1EFEA;
     margin: 0;
     padding: 60px 40px;
 }
 .planning-block h2 {
     color: #F1EFEA;
     margin-top: 0;
+    letter-spacing: 4px;
 }
 .planning-block p {
-    color: #ffffff;
+    color: #F1EFEA;
 }
 .planning-block a {
     color: #F1EFEA;
@@ -286,65 +302,73 @@ footer a:visited {
 
 /* CANINE CARE BLOCK */
 .canine-care-block {
-    background-color: #F1EFEA;
-    color: #2C3531;
+    background-color: #d6b3a0;
+    color: #742713;
     margin: 0;
     padding: 40px 20px;
     text-align: center;
 }
 
+.canine-care-block p {
+    color: #742713;
+}
+
 h1 {
     margin-top: 20px;
     margin-bottom: 20px;
+    letter-spacing: 4px;
 }
 
 /*SEDONA TRAILS BLOCK*/
 .canine-trails-block {
-    background-color: #455953; 
+    background-color: #F1EFEA; 
     margin: 0;
     padding: 40px 20px; 
 }   
 
 .canine-trails-block h3 {
-    color: #F1EFEA;
+    color: #D67A4E;
     margin-top: 0; 
     margin-bottom: 15px;
+    letter-spacing: 4px;
 }
 
 .canine-trails-block p {
-    color: #ffffff;
+    color: #2f1811;
     margin-bottom: 20px;
 }
 
 /* DAYCARE BLOCK */
 .daycare-block {
-    background-color: #F1EFEA;
-    color: #2C3531;
+    background-color: #9f5d4d;
+    color: #F1EFEA;
     margin: 0;
     padding: 40px 20px;
 }
 .daycare-block h3 {
-    color: #D67A4E;
+    color: #F1EFEA;
     margin-top: 0;
     margin-bottom: 15px;
+    letter-spacing: 4px;
 }
 .daycare-block p, .daycare-block li {
-    color: #2C3531;
+    color: #F1EFEA;
 }
 
 /* PACKING BLOCK */
 .packing-block {
-    background-color: #455953;
+    background-color: #F1EFEA;
     margin: 0;
     padding: 40px 20px;
 }
 .packing-block h3 {
-    color: #F1EFEA;
+    color: #D67A4E;
     margin-top: 0;
     margin-bottom: 15px;
+    letter-spacing: 4px;
 }
 .packing-block p {
-    color: #ffffff;
+    color: #2f1811;
 }
 
 
@@ -352,7 +376,7 @@ h1 {
    GLOBAL CALL TO ACTION BLOCK & BUTTON
    ========================================== */
 .call-to-action-block {
-    background-color: #1A1C12;
+    background-color: #bd8274;
     color: #ffffff;
     margin: 0;
     padding: 60px 40px;
@@ -361,12 +385,14 @@ h1 {
 .call-to-action-block h2 {
     color: #ffffff;
     margin-top: 0;
+    letter-spacing: 8px;
 }
 .call-to-action-block p {
     color: #ffffff;
+    font-style: italic;
 }
 .call-to-action-block button {
-    background-color: #D67A4E;
-    color: #ffffff;
+    background-color: #F1EFEA;;
+    color: #9f5d4d;
     border: none;
 }
