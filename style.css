@@ -10,6 +10,7 @@ body {
     color: #944a3a;
     margin: 0;
     padding: 0;
+    height:100%;
 }
 
 /* Global Heading Rules to handle fonts and tracking */
@@ -52,6 +53,44 @@ main img {
 }
 
 /* Specific styles for header and footer */
+
+/* HEADER */
+
+/* Header container layout using Flexbox */
+header {
+    background-color: #2f1811;
+    font-family: 'Sekuya', sans-serif;
+    padding: 20px 40px;
+    margin: 0;
+    
+    /* Perfect flexbox alignment to push logo left and nav right */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* UNIQUE ID SELECTOR FOR TEXT LOGO */
+#site-logo {
+    color: #F1EFEA;
+    font-size: 32px;        /* Bold brand statement size */
+    letter-spacing: 8px;   /* Luxury editorial letter spacing */
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    /* Fulfills percentage width requirement */
+    width: 20%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2f1811;
+    color: #ddd5d4;
+    padding: 20px;
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+}
+
 header {
     background-color: #2f1811;
     font-family: 'Sekuya', sans-serif;
@@ -353,6 +392,18 @@ footer a:visited {
     color: #2f1811;
 }
 
+/* BOOKING PAGE */
+.book-title {
+    text-align: center;
+}
+
+.booking-info {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 380px;
+}
+
+
 
 /* ==========================================
    GLOBAL CALL TO ACTION BLOCK & BUTTON
@@ -383,4 +434,16 @@ footer a:visited {
     background-color: transparent; /* Clean hollow ghost layout on hover */
     color: #F1EFEA;                /* Shifts text color to light clear cream */
     border-color: #F1EFEA;
+}
+
+/* Unique ID selector controlling a 100% width content area */
+#cta-title {
+    color: #ffffff;
+    letter-spacing: 8px;
+    text-shadow: 3px 3px 4px #2f1811; /* Adds a soft, luxury dark espresso shadow */
+}
+
+.call-to-action-block p {
+    color: #ffffff;
+    font-style: italic;
 }
