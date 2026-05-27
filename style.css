@@ -432,10 +432,3 @@ footer a:visited {
     margin: 0;
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
 }
-
-/*MOBILE VIEW*/
-
-/* LOCK DESKTOP LAYOUT */
-body {
-    min-width: 1700px;
-}
