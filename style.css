@@ -433,11 +433,11 @@ footer a:visited {
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
 }
 
-/* FORCE DESKTOP SCALE ON MOBILE */
-@media only screen and (max-width: 1000px) {
+/* FORCE DESKTOP EXPERIENCE ON MOBILE */
+@media only screen and (max-width: 1700px) {
     body {
         width: 1700px;
-        transform: scale(0.55);
-        transform-origin: top center;
+        margin: 0 auto;
+        overflow-x: scroll;
     }
 }
