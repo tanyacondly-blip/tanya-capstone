@@ -433,9 +433,8 @@ footer a:visited {
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
 }
 
-/* ==========================================
-   MOBILE RESPONSIVENESS ENGINE (Under 768px)
-   Implemented with AI assistance to ensure optimal user experience (UX) 
-   on smaller mobile viewports by converting horizontal flex blocks into vertical stacks.
-   ========================================== */
-
+/* FORCE DESKTOP VIEW ON ALL DEVICES */
+html, body {
+    width: 1700px !important;
+    overflow-x: auto !important;
+}
