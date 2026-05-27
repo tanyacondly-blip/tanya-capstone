@@ -6,7 +6,7 @@
 
 body {
     background-color: #ddd5d4;
-    background-image: url("./images/so-white.png"); 
+    background-image: url("./images/so-white.png");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,8 +15,13 @@ body {
     color: #944a3a;
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+}
+
+.main-container {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* STRUCTURAL WRAPPER CONTAINER */
@@ -431,13 +436,4 @@ footer a:visited {
     font-style: italic;
     margin: 0;
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
-}
-
-/* FORCE DESKTOP EXPERIENCE ON MOBILE */
-@media only screen and (max-width: 1700px) {
-    body {
-        width: 1700px;
-        margin: 0 auto;
-        overflow-x: scroll;
-    }
 }
