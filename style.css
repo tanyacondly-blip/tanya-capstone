@@ -16,12 +16,15 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
-/* NEW CONTAINER SELECTOR CLASS */
+/* STRUCTURAL WRAPPER CONTAINER */
 .main-container {
-    max-width: 1200px;
+    max-width: 1700px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Global Heading Rules to handle fonts and tracking */
@@ -57,17 +60,36 @@ li {
     line-height: 1.6;
 }
 
-main img {
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 20px;
+/* NEW FLEXBOX SPLIT LAYOUT ENGINE */
+.split-block {
+    display: flex;
+    align-items: flex-start; /* Aligns header text row perfectly level with photo top */
+    gap: 40px; /* Space between picture column and text column */
+    padding: 60px 40px;
+    margin: 0;
 }
 
-/* Specific styles for header and footer */
+.block-image, .block-text {
+    flex: 1; /* Splits the columns evenly */
+}
 
-/* HEADER */
+.block-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
 
-/* Header container layout using Flexbox */
+/* DIRECTION LOGIC ENGINE (Alternating Columns) */
+.image-left {
+    flex-direction: row; /* Image on left, text on right */
+}
+
+.image-right {
+    flex-direction: row-reverse; /* Image on right, text on left */
+}
+
+/* HEADER CONTAINER LAYOUT */
 header {
     background-color: #2f1811;
     font-family: 'Sekuya', sans-serif;
@@ -75,46 +97,29 @@ header {
     margin: 0;
     border-bottom: 3px solid #9f5d4d;
     
-    /* Perfect flexbox alignment to push logo left and nav right */
     display: flex;
     justify-content: space-between; 
     align-items: center; 
+
+    /* Removed fixed positioning so back to top works perfectly */
+    position: relative;
+    width: 100%;
 }
 
-/* UNIQUE ID SELECTOR FOR TEXT LOGO */
 #site-logo {
     color: #F1EFEA;
-    font-size: 32px;        /* Bold brand statement size */
-    letter-spacing: 8px;   /* Luxury editorial letter spacing */
+    font-size: 32px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     font-weight: bold;
-    
-    /* Fulfills percentage width requirement */
     width: 20%;
 }
 
-/* FOOTER */
+/* FOOTER CONTAINER */
 footer {
     background-color: #2f1811;
     color: #ddd5d4;
-    padding: 20px;
-    margin: 0;
-    font-weight: bold;
-    text-align: right;
-}
-
-header {
-    background-color: #2f1811;
-    font-family: 'Sekuya', sans-serif;
-    padding: 20px;
-    margin: 0;
-    text-align: right;
-}
-
-footer {
-    background-color: #2f1811;
-    color: #ddd5d4;
-    padding: 20px;
+    padding: 40px 20px;
     margin: 0;
     font-weight: bold;
     text-align: right;
@@ -124,7 +129,6 @@ footer p {
     color: #ddd5d4;
 }
 
-/* Unclicked links in the body text */
 main a:link {
     color: #ddd5d4;
     font-weight: bold;
@@ -132,16 +136,12 @@ main a:link {
     font-style: italic;
 }
 
-/* Clicked links in the body text */
 main a:visited {
     color: #ddd5d4;
     font-weight: bold;
     font-style: italic;
 }
 
-/* Custom Book Now Button Styles */
-
-/* RESTING STATE: Clear contrast identity */
 button {
     font-family: 'Montserrat', sans-serif; 
     font-size: 1rem;
@@ -149,27 +149,21 @@ button {
     letter-spacing: 3px;
     padding: 12px 28px;
     margin: 15px 0;
-    background-color: #2f1811;  /* Dark espresso resting background */
-    color: #F1EFEA;             /* Warm cream resting text */
-    border: 2px solid #2f1811;  /* Sharp, matching espresso border frame */
+    background-color: #2f1811;
+    color: #F1EFEA;
+    border: 2px solid #2f1811;
     border-radius: 8px; 
     cursor: pointer; 
     transition: all 0.3s ease; 
 }
 
-/* HOVER STATE: Dynamic interactive swap */
 button:hover {
-    background-color: #F1EFEA;  /* Swaps to warm cream background */
-    color: #2f1811;             /* Swaps text back to dark espresso */
-    border-color: #2f1811;      /* Retains structural border continuity */
+    background-color: #F1EFEA;
+    color: #2f1811;
+    border-color: #2f1811;
     box-shadow: 0 4px 15px rgba(47, 24, 17, 0.2);
 }
 
-/*Natigation & Footer Link Colours and Spacing*/
-
-/* NAVIGATION */
-
-/* Unclicked state (The original color before a user clicks it) */
 nav a:link {
     color: #ede9c4;
     font-family: 'Montserrat', sans-serif;
@@ -179,50 +173,44 @@ nav a:link {
     text-transform: uppercase;
 }
 
-/* Clicked state (The color the link AFTER it has been visited) */
 nav a:visited {
     color: #ede9c4;
 }
 
-/* The hover state when someone rolls their mouse over a nav link */
 nav a:hover {
-    color: #FFFFFF;                       /* Or change to #9f5d4d if you want that terracotta pop! */
-    font-family: 'Montserrat', sans-serif; /* Keeps your clean paragraph font active */
-    cursor: pointer;                      /* Shows the interactive clicking hand */
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
     transition: color 0.2s ease;
 }
-nav a:active{
-    color: #9f5d4d;                       /* Optional: A distinct color when the link is actively being clicked */
+
+nav a:active {
+    color: #9f5d4d;
 }
 
-/* FOOTER */
-
-/* Unclicked state in the footer */
 footer a:link {
     color: #ede9c4;
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
 }
 
-/* Clicked state in the footer */
 footer a:visited {
     color: #ede9c4;
 }
 
-/* ---Specific styles for class sections--- */
-
 /* ==========================================
-   HOMEPAGE STRUCTURAL FIXES (index.html)
+   HOMEPAGE CONTENT BLOCKS (index.html)
    ========================================== */
 
-/* TITLE INTRO BLOCK */
 .intro-block {
     background-color: #d6b3a0;
-    color: #2f1811;
+    color: #742713;
     margin: 0;
-    padding: 60px 40px;
+    padding: 60px 40px; /* Reduced from 150px to keep spacing balanced */
     text-align: center;
+    width: 100%;
 }
+
 .intro-block h1 {
     color: #742713;
     letter-spacing: 8px;
@@ -231,26 +219,17 @@ footer a:visited {
     color: #742713;
 }
 
-/* PROPERTY BLOCK*/
 .property-block {
-    background-color: #ddd5d4;
+    background-color: rgba(221, 213, 212, 0.85);
     color: #2f1811;
-    margin: 0;
-    padding: 60px 40px;
 }
 .property-block h2 {
     color: #bb5d3e;
 }
-.property-block p {
-    margin-bottom: 20px;
-}
 
-/* ABOUT BLOCK */
 .about-block {
-    background-color: #9f5d4d;
+    background-color: rgba(159, 93, 77, 0.88);
     color: #F1EFEA;
-    margin: 0;
-    padding: 60px 40px;
 }
 .about-block h2 {
     color: #F1EFEA;
@@ -259,40 +238,25 @@ footer a:visited {
     color: #F1EFEA;
 }
 
-/* STAY BLOCK */
 .stay-block {
-    background-color: #d6b3a0;
+    background-color: rgba(214, 179, 160, 0.85);
     color: #742713;
-    margin: 0;
-    padding: 60px 40px;
 }
 .stay-block h2 {
     color: #742713;
 }
-.stay-block p {
-    color: #742713;
-}
 
-/* WELLNESS BLOCK */
 .wellness-block {
-    background-color: #F1EFEA;
+    background-color: rgba(241, 239, 234, 0.85);
     color: #D67A4E;
-    margin: 0;
-    padding: 60px 40px;
 }
 .wellness-block h2 {
     color: #D67A4E;
 }
-.wellness-block p {
-    color: #2f1811;
-}
 
-/* TRAILS BLOCK */
 .trails-block {
-    background-color: #9f5d4d;
+    background-color: rgba(159, 93, 77, 0.88);
     color: #F1EFEA;
-    margin: 0;
-    padding: 60px 40px;
 }
 .trails-block h2, .trails-block h3 {
     color: #F1EFEA;
@@ -301,40 +265,26 @@ footer a:visited {
     color: #F1EFEA;
 }
 
-/* SUSTAINABILITY BLOCK */
 .sustainability-block {
-    background-color: #d6b3a0;
+    background-color: rgba(214, 179, 160, 0.85);
     color: #742713;
-    margin: 0;
-    padding: 60px 40px;
 }
 .sustainability-block h2 {
     color: #742713;
 }
-.sustainability-block p {
-    color: #742713;
-}
 
-/* HOME PAGE CANINE BLOCK */
 .canine-block {
-    background-color: #F1EFEA;
+    background-color: rgba(241, 239, 234, 0.85);
     color: #D67A4E;
-    margin: 0;
-    padding: 60px 40px;
 }
 .canine-block h2, .canine-block h3 {
     color: #D67A4E;
 }
-.canine-block p {
-    color: #2f1811;
-}
 
-/* PLANNING BLOCK */
 .planning-block {
-    background-color: #9f5d4d;
+    background-color: rgba(159, 93, 77, 0.88);
     color: #F1EFEA;
-    margin: 0;
-    padding: 60px 40px;
+    padding-bottom: 90px; /* Spacious baseline connection padding */
 }
 .planning-block h2 {
     color: #F1EFEA;
@@ -345,44 +295,40 @@ footer a:visited {
 .planning-block a {
     color: #F1EFEA;
 }
-
+.planning-block .picture-credit {
+    margin-top: 10px;
+}
 
 /* ==========================================
-   CANINE PAGE SPECIFIC BLOCKS (canine.html)
+   CANINE PAGE CONFIGURATIONS (canine.html)
    ========================================== */
 
-/* CANINE CARE BLOCK */
 .canine-care-block {
     background-color: #d6b3a0;
     color: #742713;
     margin: 0;
-    padding: 40px 20px;
+    padding: 60px 20px; /* Reduced from 150px to keep spacing balanced */
     text-align: center;
+    width: 100%;
 }
+
 .canine-care-block p {
     color: #742713;
 }
 
-/*SEDONA TRAILS BLOCK*/
 .canine-trails-block {
-    background-color: #F1EFEA; 
-    margin: 0;
-    padding: 40px 20px; 
+    background-color: rgba(241, 239, 234, 0.85); 
 }   
 .canine-trails-block h3 {
     color: #D67A4E;
 }
 .canine-trails-block p {
     color: #2f1811;
-    margin-bottom: 20px;
 }
 
-/* DAYCARE BLOCK */
 .daycare-block {
-    background-color: #9f5d4d;
+    background-color: rgba(159, 93, 77, 0.88);
     color: #F1EFEA;
-    margin: 0;
-    padding: 40px 20px;
 }
 .daycare-block h3 {
     color: #F1EFEA;
@@ -391,41 +337,33 @@ footer a:visited {
     color: #F1EFEA;
 }
 
-/* PACKING BLOCK */
 .packing-block {
-    background-color: #F1EFEA;
-    margin: 0;
-    padding: 40px 20px;
+    background-color: rgba(241, 239, 234, 0.85);
 }
 .packing-block h3 {
     color: #D67A4E;
 }
-.packing-block p {
-    color: #2f1811;
-}
 
-/* BOOKING PAGE */
+/* RESERVATIONS INTERFACE */
 .book-title {
     text-align: center;
 }
-
 .booking-info {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 380px;
 }
 
-
-
 /* ==========================================
-   GLOBAL CALL TO ACTION BLOCK & BUTTON
+   GLOBAL CALL TO ACTION INTERACTIVE STRIP
    ========================================== */
 .call-to-action-block {
     background-color: #bd8274;
     color: #ffffff;
     margin: 0;
-    padding: 60px 40px;
+    padding: 90px 40px; 
     text-align: center;
+    width: 100%;
 }
 .call-to-action-block h2 {
     color: #ffffff;
@@ -435,27 +373,72 @@ footer a:visited {
     color: #ffffff;
     font-style: italic;
 }
-
-/* Custom override variant for the CTA block button inside dark layout */
 .call-to-action-block button {
-    background-color: #F1EFEA;   /* Clear cream resting identity on dark background */
-    color: #9f5d4d;             /* Matching clay text shade */
+    background-color: #F1EFEA; 
+    color: #9f5d4d; 
     border: 2px solid #F1EFEA;
 }
 .call-to-action-block button:hover {
-    background-color: transparent; /* Clean hollow ghost layout on hover */
-    color: #F1EFEA;                /* Shifts text color to light clear cream */
+    background-color: transparent; 
+    color: #F1EFEA; 
     border-color: #F1EFEA;
 }
 
-/* Unique ID selector controlling a 100% width content area */
 #cta-title {
     color: #ffffff;
     letter-spacing: 8px;
-    text-shadow: 3px 3px 4px #2f1811; /* Adds a soft, luxury dark espresso shadow */
+    text-shadow: 3px 3px 4px #2f1811;
 }
 
-.call-to-action-block p {
-    color: #ffffff;
+/* ==========================================
+   GLOBAL BREAKER BANNER SYSTEM (HTML IMG VERSION)
+   ========================================== */
+
+/* The Core Structural Engine */
+.breaker-banner {
+    position: relative; /* Anchors the text layer safely over the photo */
+    width: 100%;
+    margin: 60px 0;
+    overflow: hidden; /* Clips any messy image edges */
+}
+
+/* Forces the HTML <img> to snap into a horizontal strip */
+.banner-image {
+    width: 100%;
+    height: 350px; /* Locks a uniform, elegant banner height */
+    object-fit: cover; /* Crops the photo beautifully instead of stretching it */
+    display: block;
+    filter: brightness(55%); /* Automatically dims the photo so light text pops */
+}
+
+/* The Text Layer (Floating dead-center over the photo) */
+.banner-content {
+    position: absolute; /* Lifts the text up and sticks it on top of the image */
+    top: 50%; /* Slides it down halfway */
+    left: 50%; /* Slides it right halfway */
+    transform: translate(-50%, -50%); /* Locks the exact center point perfectly */
+    text-align: center;
+    width: 90%; 
+    z-index: 2; /* Keeps text layered on top */
+}
+
+.banner-content h2 {
+    color: #F1EFEA;
+    font-size: 42px;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 10px rgba(47, 24, 17, 0.7); /* Ensures text pops perfectly */
+}
+
+.banner-content p {
+    color: #ede9c4;
+    font-size: 20px;
     font-style: italic;
+    margin: 0;
+    text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
+}
+
+/* Micro-adjusting framing specifically for dog faces */
+.canine-focus {
+    object-position: center 20%; /* Tilts the frame upward to clear her shoulders and show her face */
 }
