@@ -100,8 +100,6 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-
-    /* Removed fixed positioning so back to top works perfectly */
     position: relative;
     width: 100%;
 }
@@ -206,7 +204,7 @@ footer a:visited {
     background-color: #d6b3a0;
     color: #742713;
     margin: 0;
-    padding: 60px 40px; /* Reduced from 150px to keep spacing balanced */
+    padding: 60px 40px;
     text-align: center;
     width: 100%;
 }
@@ -284,7 +282,7 @@ footer a:visited {
 .planning-block {
     background-color: rgba(159, 93, 77, 0.88);
     color: #F1EFEA;
-    padding-bottom: 90px; /* Spacious baseline connection padding */
+    padding-bottom: 90px;
 }
 .planning-block h2 {
     color: #F1EFEA;
@@ -307,7 +305,7 @@ footer a:visited {
     background-color: #d6b3a0;
     color: #742713;
     margin: 0;
-    padding: 60px 20px; /* Reduced from 150px to keep spacing balanced */
+    padding: 60px 20px;
     text-align: center;
     width: 100%;
 }
@@ -394,10 +392,6 @@ footer a:visited {
    GLOBAL BREAKER BANNER SYSTEM (HTML IMG VERSION)
    ========================================== */
 
-/* ==========================================
-   GLOBAL BREAKER BANNER SYSTEM (HTML IMG VERSION)
-   ========================================== */
-
 .breaker-banner {
     position: relative; 
     width: 100%;
@@ -454,7 +448,7 @@ footer a:visited {
         padding: 40px 20px;
     }
 
-    /* 2. Center your navigation links neatly under the logo */
+    /* 2. Center navigation links neatly under the logo */
     header {
         flex-direction: column;
         gap: 15px;
