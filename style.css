@@ -433,8 +433,9 @@ footer a:visited {
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
 }
 
-/* FORCE DESKTOP VIEW ON ALL DEVICES */
-html, body {
-    width: 1700px !important;
-    overflow-x: auto !important;
+/*MOBILE VIEW*/
+
+/* LOCK DESKTOP LAYOUT */
+body {
+    min-width: 1700px;
 }
