@@ -394,32 +394,33 @@ footer a:visited {
    GLOBAL BREAKER BANNER SYSTEM (HTML IMG VERSION)
    ========================================== */
 
-/* The Core Structural Engine */
+/* ==========================================
+   GLOBAL BREAKER BANNER SYSTEM (HTML IMG VERSION)
+   ========================================== */
+
 .breaker-banner {
-    position: relative; /* Anchors the text layer safely over the photo */
+    position: relative; 
     width: 100%;
     margin: 60px 0;
-    overflow: hidden; /* Clips any messy image edges and kills horizontal scroll */
+    overflow: hidden; 
 }
 
-/* Forces the HTML <img> to snap into a horizontal strip */
 .banner-image {
     width: 100%;
-    height: 350px; /* Locks a uniform, elegant banner height */
-    object-fit: cover; /* Crops the photo beautifully instead of stretching it */
+    height: 350px; 
+    object-fit: cover; 
     display: block;
-    filter: brightness(55%); /* Automatically dims the photo so light text pops */
+    filter: brightness(55%); 
 }
 
-/* The Text Layer (Floating dead-center over the photo) */
 .banner-content {
-    position: absolute; /* Lifts the text up and sticks it on top of the image */
-    top: 50%; /* Slides it down halfway */
-    left: 50%; /* Slides it right halfway */
-    transform: translate(-50%, -50%); /* Locks the exact center point perfectly */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     text-align: center;
     width: 90%; 
-    z-index: 2; /* Keeps text layered on top */
+    z-index: 2; 
 }
 
 .banner-content h2 {
@@ -427,7 +428,7 @@ footer a:visited {
     font-size: 42px;
     letter-spacing: 6px;
     margin-bottom: 12px;
-    text-shadow: 2px 2px 10px rgba(47, 24, 17, 0.7); /* Ensures text pops perfectly */
+    text-shadow: 2px 2px 10px rgba(47, 24, 17, 0.7); 
 }
 
 .banner-content p {
