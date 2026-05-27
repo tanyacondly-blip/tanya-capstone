@@ -438,3 +438,44 @@ footer a:visited {
     margin: 0;
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
 }
+
+/* ==========================================
+   MOBILE RESPONSIVENESS ENGINE (Under 768px)
+   Implemented with AI assistance to ensure optimal user experience (UX) 
+   on smaller mobile viewports by converting horizontal flex blocks into vertical stacks.
+   ========================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. Stack the columns vertically instead of side-by-side */
+    .split-block {
+        flex-direction: column !important; /* Forces layout to stack downward */
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    /* 2. Center your navigation links neatly under the logo */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #site-logo {
+        width: 100%;
+    }
+
+    /* 3. Scale down heading sizes so they fit small screens comfortably */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2, .banner-content h2 {
+        font-size: 24px;
+    }
+
+    .banner-image {
+        height: 250px; /* Slightly shorter banner strip for mobile viewport balance */
+    }
+}
