@@ -439,25 +439,7 @@ footer a:visited {
    on smaller mobile viewports by converting horizontal flex blocks into vertical stacks.
    ========================================== */
 
-@media screen and (max-width: 768px) {
-    
-    .split-block {
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 30px 15px !important;
-    }
-
-    .block-image, .block-text {
-        width: 100% !important;
-        flex: none !important;
-    }
-
-    header {
-        flex-direction: column !important;
-        gap: 12px !important;
-        text-align: center !important;
-        padding: 15px !important;
-    }
+@media (max-width: 768px) {
 
     #site-logo {
         width: 100% !important;
