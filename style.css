@@ -439,37 +439,40 @@ footer a:visited {
    on smaller mobile viewports by converting horizontal flex blocks into vertical stacks.
    ========================================== */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     
-    /* 1. Stack the columns vertically instead of side-by-side */
     .split-block {
-        flex-direction: column !important; /* Forces layout to stack downward */
-        gap: 20px;
-        padding: 40px 20px;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 30px 15px !important;
     }
 
-    /* 2. Center navigation links neatly under the logo */
+    .block-image, .block-text {
+        width: 100% !important;
+        flex: none !important;
+    }
+
     header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 20px;
+        flex-direction: column !important;
+        gap: 12px !important;
+        text-align: center !important;
+        padding: 15px !important;
     }
 
     #site-logo {
-        width: 100%;
+        width: 100% !important;
+        margin-bottom: 5px !important;
     }
 
-    /* 3. Scale down heading sizes so they fit small screens comfortably */
     h1 {
-        font-size: 28px;
+        font-size: 26px !important;
     }
 
     h2, .banner-content h2 {
-        font-size: 24px;
+        font-size: 22px !important;
     }
 
     .banner-image {
-        height: 250px; /* Slightly shorter banner strip for mobile viewport balance */
+        height: 220px !important;
     }
 }
