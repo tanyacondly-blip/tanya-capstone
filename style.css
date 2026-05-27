@@ -399,7 +399,7 @@ footer a:visited {
     position: relative; /* Anchors the text layer safely over the photo */
     width: 100%;
     margin: 60px 0;
-    overflow: hidden; /* Clips any messy image edges */
+    overflow: hidden; /* Clips any messy image edges and kills horizontal scroll */
 }
 
 /* Forces the HTML <img> to snap into a horizontal strip */
@@ -436,9 +436,4 @@ footer a:visited {
     font-style: italic;
     margin: 0;
     text-shadow: 1px 1px 6px rgba(47, 24, 17, 0.7);
-}
-
-/* Micro-adjusting framing specifically for dog faces */
-.canine-focus {
-    object-position: center 20%; /* Tilts the frame upward to clear her shoulders and show her face */
 }
