@@ -434,8 +434,10 @@ footer a:visited {
 }
 
 /* FORCE DESKTOP SCALE ON MOBILE */
-body {
-    width: 1700px;
-    margin: 0 auto;
-    overflow-x: auto;
+@media only screen and (max-width: 1000px) {
+    body {
+        width: 1700px;
+        transform: scale(0.55);
+        transform-origin: top center;
+    }
 }
