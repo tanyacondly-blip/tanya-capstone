@@ -439,22 +439,3 @@ footer a:visited {
    on smaller mobile viewports by converting horizontal flex blocks into vertical stacks.
    ========================================== */
 
-@media (max-width: 768px) {
-
-    #site-logo {
-        width: 100% !important;
-        margin-bottom: 5px !important;
-    }
-
-    h1 {
-        font-size: 26px !important;
-    }
-
-    h2, .banner-content h2 {
-        font-size: 22px !important;
-    }
-
-    .banner-image {
-        height: 220px !important;
-    }
-}
